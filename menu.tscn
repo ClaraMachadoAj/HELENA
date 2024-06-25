@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cpon88be0ypfm"]
 
-[ext_resource type="Script" path="res://MENU.gd" id="1_fit8s"]
+[ext_resource type="Script" path="res://MENU.gd" id="1_kmxt7"]
 
 [node name="MENU" type="Control"]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_fit8s")
+script = ExtResource("1_kmxt7")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -21,9 +21,16 @@ layout_mode = 2
 
 [node name="INICIAR" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+text = "INICIAR"
 
 [node name="OPÇÕES" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+text = "OPÇÕES"
 
 [node name="SAIR" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+text = "SAIR"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/INICIAR" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/OPÇÕES" to="." method="_on_opções_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/SAIR" to="." method="_on_sair_pressed"]

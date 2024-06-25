@@ -21,9 +21,12 @@ layout_mode = 2
 
 [node name="VOLUME" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+text = "VOLUME"
 
 [node name="VOLTAR" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+text = "VOLTAR"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VOLUME" to="." method="_on_volume_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VOLTAR" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VOLTAR" to="." method="_on_volume_pressed"]
