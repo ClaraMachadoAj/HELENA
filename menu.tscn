@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpon88be0ypfm"]
+[gd_scene load_steps=3 format=3 uid="uid://cpon88be0ypfm"]
 
 [ext_resource type="Script" path="res://MENU.gd" id="1_kmxt7"]
+[ext_resource type="Texture2D" uid="uid://6rlydmo8gf7v" path="res://capa_2.png" id="2_8ksyi"]
 
 [node name="MENU" type="Control"]
 layout_mode = 3
@@ -16,21 +17,32 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
+[node name="Capa2" type="Sprite2D" parent="."]
+position = Vector2(575.5, 323)
+scale = Vector2(0.599479, 0.598148)
+texture = ExtResource("2_8ksyi")
 
-[node name="INICIAR" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "INICIAR"
+[node name="INICIAR" type="Button" parent="Capa2"]
+offset_left = -73.0
+offset_top = -4.0
+offset_right = 73.0
+offset_bottom = 31.0
+flat = true
 
-[node name="OPÇÕES" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "OPÇÕES"
+[node name="OPÇÕES" type="Button" parent="Capa2"]
+offset_left = -73.0
+offset_top = 62.0
+offset_right = 77.0
+offset_bottom = 101.0
+flat = true
 
-[node name="SAIR" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "SAIR"
+[node name="SAIR" type="Button" parent="Capa2"]
+offset_left = -50.0
+offset_top = 128.0
+offset_right = 52.0
+offset_bottom = 159.0
+flat = true
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/INICIAR" to="." method="_on_iniciar_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/OPÇÕES" to="." method="_on_opções_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/SAIR" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="Capa2/INICIAR" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="Capa2/OPÇÕES" to="." method="_on_opções_pressed"]
+[connection signal="pressed" from="Capa2/SAIR" to="." method="_on_sair_pressed"]
