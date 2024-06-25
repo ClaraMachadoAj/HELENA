@@ -1,33 +1,173 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0oew608yqgr7"]
+[gd_scene load_steps=23 format=3 uid="uid://d0oew608yqgr7"]
 
 [ext_resource type="Texture2D" uid="uid://brhk6nh2wk53x" path="res://JOGO/Helena.png" id="1_1t8e8"]
 [ext_resource type="Script" path="res://JOGO/PLAYER.gd" id="1_logv8"]
-[ext_resource type="Texture2D" uid="uid://dvdpgrdns1yt1" path="res://JOGO/imagem-larga-do-campo-de-grama-verde-27742821.webp" id="3_pfrs0"]
+[ext_resource type="Texture2D" uid="uid://couaq451xs4wo" path="res://JOGO/quartobebe.png" id="3_akcgl"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3g610"]
-radius = 30.0
-height = 80.0
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ova0t"]
+a = Vector2(578.5, -548.5)
+b = Vector2(578.5, 180.5)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_trw7o"]
+a = Vector2(660, 170)
+b = Vector2(-682, 166)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_gavow"]
+a = Vector2(619.144, -341.794)
+b = Vector2(-492.286, -332.852)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_soj2k"]
+a = Vector2(-523, 300)
+b = Vector2(-529, -440)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_uoo8s"]
+a = Vector2(-312, -384)
+b = Vector2(-310, -284)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_6jd2l"]
+a = Vector2(-308, -283)
+b = Vector2(-120, -284)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_adcs4"]
+a = Vector2(-120, -283)
+b = Vector2(-118, -388)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_g1m7g"]
+a = Vector2(-75, -281)
+b = Vector2(-80, -388)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_dpmh2"]
+a = Vector2(347, -283)
+b = Vector2(-73, -283)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_sk0t4"]
+a = Vector2(344, -386)
+b = Vector2(344, -277)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_e44wi"]
+a = Vector2(390, -272)
+b = Vector2(381, -386)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_320wk"]
+a = Vector2(574, -270)
+b = Vector2(394, -270)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_pfgdj"]
+a = Vector2(-508, -311)
+b = Vector2(-504, -386)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ajamp"]
+a = Vector2(-574, -313)
+b = Vector2(-508, -317)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0h4cp"]
+a = Vector2(-274, -77)
+b = Vector2(322, -77)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ssehm"]
+a = Vector2(-247, 183)
+b = Vector2(-247, -41)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_shlk1"]
+a = Vector2(317, 186)
+b = Vector2(309, -57)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ya8li"]
+radius = 45.0
+height = 90.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6i0vi"]
+size = Vector2(1156, 660)
 
 [node name="Helena" type="Node2D"]
 
-[node name="Player" type="CharacterBody2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Colisoes_Mapa" type="StaticBody2D" parent="Area2D"]
+
+[node name="Parede_direita" type="CollisionShape2D" parent="Area2D/Colisoes_Mapa"]
 top_level = true
-position = Vector2(0, 1)
+position = Vector2(-4.5, 122.5)
+shape = SubResource("SegmentShape2D_ova0t")
+
+[node name="Chao" type="CollisionShape2D" parent="Area2D/Colisoes_Mapa"]
+top_level = true
+shape = SubResource("SegmentShape2D_trw7o")
+
+[node name="Teto" type="CollisionShape2D" parent="Area2D/Colisoes_Mapa"]
+scale = Vector2(1.0563, 1.00645)
+shape = SubResource("SegmentShape2D_gavow")
+
+[node name="Parede_esquerda" type="CollisionShape2D" parent="Area2D/Colisoes_Mapa"]
+shape = SubResource("SegmentShape2D_soj2k")
+
+[node name="Colisoes_Objetos" type="StaticBody2D" parent="Area2D"]
+
+[node name="Bau_esquerda" type="CollisionShape2D" parent="Area2D/Colisoes_Objetos"]
+shape = SubResource("SegmentShape2D_uoo8s")
+
+[node name="Bau_baixo" type="CollisionShape2D" parent="Area2D/Colisoes_Objetos"]
+shape = SubResource("SegmentShape2D_6jd2l")
+
+[node name="Bau_direita" type="CollisionShape2D" parent="Area2D/Colisoes_Objetos"]
+shape = SubResource("SegmentShape2D_adcs4")
+
+[node name="Movel_esquerda" type="CollisionShape2D" parent="Area2D/Colisoes_Objetos"]
+shape = SubResource("SegmentShape2D_g1m7g")
+
+[node name="Movel_baixo" type="CollisionShape2D" parent="Area2D/Colisoes_Objetos"]
+shape = SubResource("SegmentShape2D_dpmh2")
+
+[node name="Movel_direita" type="CollisionShape2D" parent="Area2D/Colisoes_Objetos"]
+shape = SubResource("SegmentShape2D_sk0t4")
+
+[node name="Poltrona_esquerda" type="CollisionShape2D" parent="Area2D/Colisoes_Objetos"]
+shape = SubResource("SegmentShape2D_e44wi")
+
+[node name="Poltrona_baixo" type="CollisionShape2D" parent="Area2D/Colisoes_Objetos"]
+shape = SubResource("SegmentShape2D_320wk")
+
+[node name="Brinquedo_direita" type="CollisionShape2D" parent="Area2D/Colisoes_Objetos"]
+shape = SubResource("SegmentShape2D_pfgdj")
+
+[node name="Brinquedo_baixo" type="CollisionShape2D" parent="Area2D/Colisoes_Objetos"]
+shape = SubResource("SegmentShape2D_ajamp")
+
+[node name="Berco_cima" type="CollisionShape2D" parent="Area2D/Colisoes_Objetos"]
+shape = SubResource("SegmentShape2D_0h4cp")
+
+[node name="Berco_esquerda" type="CollisionShape2D" parent="Area2D/Colisoes_Objetos"]
+shape = SubResource("SegmentShape2D_ssehm")
+
+[node name="Berco_direita" type="CollisionShape2D" parent="Area2D/Colisoes_Objetos"]
+shape = SubResource("SegmentShape2D_shlk1")
+
+[node name="Player" type="CharacterBody2D" parent="Area2D"]
+top_level = true
+position = Vector2(0, -70)
 script = ExtResource("1_logv8")
 
-[node name="Helena" type="Sprite2D" parent="Player"]
+[node name="Helena" type="Sprite2D" parent="Area2D/Player"]
 position = Vector2(3.99997, -93)
 scale = Vector2(0.188393, 0.169643)
 texture = ExtResource("1_1t8e8")
 
-[node name="Hitbox" type="CollisionShape2D" parent="Player"]
-position = Vector2(-1, -71)
-shape = SubResource("CapsuleShape2D_3g610")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/Player"]
+texture_filter = 1
+position = Vector2(0, -60)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CapsuleShape2D_ya8li")
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D" type="Camera2D" parent="Area2D/Player"]
+offset = Vector2(0, -70)
+zoom = Vector2(1.5, 1.5)
+
+[node name="Quartobebe" type="Sprite2D" parent="Area2D"]
+position = Vector2(52, -100)
+scale = Vector2(1.34027, 1.35528)
+texture = ExtResource("3_akcgl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 position = Vector2(-2, -65)
-
-[node name="Imagem-larga-do-campo-de-grama-verde-27742821" type="Sprite2D" parent="."]
-position = Vector2(-2.00002, -64)
-scale = Vector2(1.4425, 1.53919)
-texture = ExtResource("3_pfrs0")
+shape = SubResource("RectangleShape2D_6i0vi")
