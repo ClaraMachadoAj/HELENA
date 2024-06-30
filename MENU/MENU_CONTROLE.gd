@@ -2,4 +2,4 @@ extends Control
 
 
 func _on_voltar_pressed():
-	get_tree().change_scene_to_file("res://MENU.tscn")
+	get_tree().change_scene_to_file("res://MENU/MENU.tscn")

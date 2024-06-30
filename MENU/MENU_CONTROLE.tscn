@@ -1,32 +1,51 @@
-[gd_scene load_steps=2 format=3 uid="uid://drtgcsgq6efnf"]
+[gd_scene load_steps=3 format=3 uid="uid://drtgcsgq6efnf"]
 
 [ext_resource type="Script" path="res://MENU/MENU_CONTROLE.gd" id="1_o8j0m"]
+[ext_resource type="Texture2D" uid="uid://dueygjmp1k0bb" path="res://MENU/capa (2).png" id="2_0cdlp"]
 
 [node name="MENU_CONTROLE" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_o8j0m")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0cdlp")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VOLTAR" type="Button" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 119.0
+offset_top = 141.0
+offset_right = 149.0
+offset_bottom = 172.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="VOLUME" type="Button" parent="NinePatchRect"]
 layout_mode = 2
+offset_right = 75.0
+offset_bottom = 31.0
+flat = true
 
-[node name="VOLUME" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "VOLUME"
-
-[node name="VOLTAR" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "VOLTAR"
-
-[connection signal="pressed" from="MarginContainer/VBoxContainer/VOLUME" to="." method="_on_volume_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/VOLTAR" to="." method="_on_voltar_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/VOLTAR" to="." method="_on_volume_pressed"]
+[connection signal="pressed" from="NinePatchRect/VOLTAR" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="NinePatchRect/VOLTAR" to="." method="_on_volume_pressed"]
+[connection signal="pressed" from="NinePatchRect/VOLUME" to="." method="_on_volume_pressed"]
