@@ -26,10 +26,14 @@ _dialog = NodePath("Background/HContainer/VContainer/Dialog")
 _faceset = NodePath("Background/HContainer/Border/Faceset")
 
 [node name="Background" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -10.0
+offset_right = 74.0
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.6)
@@ -42,10 +46,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -156.0
-offset_top = -36.0
-offset_right = 156.0
-offset_bottom = 36.0
+offset_left = -193.0
+offset_top = -44.0
+offset_right = 194.0
+offset_bottom = 44.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -54,7 +58,7 @@ custom_minimum_size = Vector2(72, 0)
 layout_mode = 2
 
 [node name="Faceset" type="TextureRect" parent="Background/HContainer/Border"]
-custom_minimum_size = Vector2(70, 72)
+custom_minimum_size = Vector2(100, 72)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
