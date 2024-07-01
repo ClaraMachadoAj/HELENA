@@ -1,9 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://d0oew608yqgr7"]
+[gd_scene load_steps=27 format=3 uid="uid://d0oew608yqgr7"]
 
 [ext_resource type="Script" path="res://JOGO/HELENA.gd" id="1_0sa5q"]
 [ext_resource type="Texture2D" uid="uid://brhk6nh2wk53x" path="res://JOGO/Helena.png" id="1_1t8e8"]
 [ext_resource type="Script" path="res://JOGO/PLAYER.gd" id="1_logv8"]
 [ext_resource type="Texture2D" uid="uid://couaq451xs4wo" path="res://JOGO/quartobebe.png" id="3_akcgl"]
+[ext_resource type="Script" path="res://JOGO/Objetos/Scripts/interaction_area_2d.gd" id="4_hocgj"]
+[ext_resource type="PackedScene" uid="uid://bhvupindgvbn0" path="res://JOGO/Objetos/baú.tscn" id="6_ud6ar"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ova0t"]
 a = Vector2(578.5, -548.5)
@@ -76,6 +78,9 @@ b = Vector2(309, -57)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ya8li"]
 radius = 45.0
 height = 90.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x2nc3"]
+radius = 81.0062
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6i0vi"]
 size = Vector2(1156, 660)
@@ -164,6 +169,13 @@ shape = SubResource("CapsuleShape2D_ya8li")
 offset = Vector2(0, -70)
 zoom = Vector2(1.5, 1.5)
 
+[node name="AreaDeInteração" type="Area2D" parent="Area2D/Player"]
+script = ExtResource("4_hocgj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/Player/AreaDeInteração"]
+position = Vector2(0, -67)
+shape = SubResource("CircleShape2D_x2nc3")
+
 [node name="Quartobebe" type="Sprite2D" parent="Area2D"]
 position = Vector2(52, -100)
 scale = Vector2(1.34027, 1.35528)
@@ -172,5 +184,8 @@ texture = ExtResource("3_akcgl")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-2, -65)
 shape = SubResource("RectangleShape2D_6i0vi")
+
+[node name="Baú" parent="Area2D" instance=ExtResource("6_ud6ar")]
+position = Vector2(332, -231)
 
 [node name="HUD" type="CanvasLayer" parent="."]
