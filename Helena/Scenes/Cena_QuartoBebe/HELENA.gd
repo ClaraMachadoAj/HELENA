@@ -5,27 +5,27 @@ const _DIALOG_SCREEN: PackedScene = preload("res://Helena/Objects/Dialog/DialogS
 
 var _dialog_data: Dictionary = {
 	0: {
-		"faceset": "res://JOGO/Dialog/Assets/CarinhaFeliz.png",
+		"faceset": "res://Helena/Objects/Dialog/Assets/CarinhaFeliz.png",
 		"dialog": "Olá! Sou o Carinha, seu guia neste jogo. Vamos aprender como jogar!",
 		"title": "Carinha"
 	},
 	1: {
-		"faceset": "res://JOGO/Dialog/Assets/CarinhaFeliz.png",
+		"faceset": "res://Helena/Objects/Dialog/Assets/CarinhaFeliz.png",
 		"dialog": "Para começar, vamos aprender a nos movimentar pelo cenário.",
 		"title": "Carinha"
 	},
 	2: {
-		"faceset": "res://JOGO/Dialog/Assets/CarinhaFeliz.png",
+		"faceset": "res://Helena/Objects/Dialog/Assets/CarinhaFeliz.png",
 		"dialog": "Use a tecla W para andar para cima e a tecla S para andar para baixo.",
 		"title": "Carinha"
 	},
 	3: {
-		"faceset": "res://JOGO/Dialog/Assets/CarinhaFeliz.png",
+		"faceset": "res://Helena/Objects/Dialog/Assets/CarinhaFeliz.png",
 		"dialog": "Para mover-se para os lados, use a tecla A para a esquerda e a tecla D para a direita.",
 		"title": "Carinha"
 	},
 	4: {
-		"faceset": "res://JOGO/Dialog/Assets/CarinhaFeliz.png",
+		"faceset": "res://Helena/Objects/Dialog/Assets/CarinhaFeliz.png",
 		"dialog": "Pressione SHIFT junto com qualquer tecla de movimento (W, A, S, D) para correr.",
 		"title": "Carinha"
 	}

@@ -11,8 +11,11 @@ radius = 46.5188
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_f1glp")
 
-[node name="BaúInterractableArea2D" type="Area2D" parent="."]
+[node name="BaúInterractableArea2D" type="Area2D" parent="." node_paths=PackedStringArray("_hud")]
 script = ExtResource("2_bk8rh")
+_hud = NodePath("../HUD")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BaúInterractableArea2D"]
 shape = SubResource("CircleShape2D_nwp7k")
+
+[node name="HUD" type="CanvasLayer" parent="."]
