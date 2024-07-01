@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doysxgs4w5qxn"
-path="res://.godot/imported/Bau.png-58ffde7dafeeee09aa75a0c2ed4e0527.ctex"
+uid="uid://c4rlsy0ymghyk"
+path="res://.godot/imported/CarinhaFeliz.png-86a1aee916a108d4165775eee6fba92a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JOGO/Objetos/Assets/Bau.png"
-dest_files=["res://.godot/imported/Bau.png-58ffde7dafeeee09aa75a0c2ed4e0527.ctex"]
+source_file="res://Helena/Objects/Dialog/Assets/CarinhaFeliz.png"
+dest_files=["res://.godot/imported/CarinhaFeliz.png-86a1aee916a108d4165775eee6fba92a.ctex"]
 
 [params]
 

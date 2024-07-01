@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="HELENA"
-run/main_scene="res://MENU/MENU.tscn"
+run/main_scene="res://Helena/Objects/MENU/MENU.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 
 [input]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://couaq451xs4wo"
-path="res://.godot/imported/quartobebe.png-e06dabb7e636dc2a0a22ff163b44233b.ctex"
+uid="uid://dnipkwyk4hxhf"
+path="res://.godot/imported/capa (1).png-db95c2e3fb3de3d7c90318b6a8a9851f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JOGO/quartobebe.png"
-dest_files=["res://.godot/imported/quartobebe.png-e06dabb7e636dc2a0a22ff163b44233b.ctex"]
+source_file="res://Helena/Objects/capa (1).png"
+dest_files=["res://.godot/imported/capa (1).png-db95c2e3fb3de3d7c90318b6a8a9851f.ctex"]
 
 [params]
 

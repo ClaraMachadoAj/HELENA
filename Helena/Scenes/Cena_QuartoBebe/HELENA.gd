@@ -1,7 +1,7 @@
 extends Node2D
 class_name Helena
 
-const _DIALOG_SCREEN: PackedScene = preload("res://JOGO/Dialog/DialogScreen.tscn")
+const _DIALOG_SCREEN: PackedScene = preload("res://Helena/Objects/Dialog/DialogScreen.tscn")
 
 var _dialog_data: Dictionary = {
 	0: {

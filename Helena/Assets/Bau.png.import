@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brhk6nh2wk53x"
-path="res://.godot/imported/Helena.png-3110d0ff9ce088a670758dd5f752f938.ctex"
+uid="uid://doysxgs4w5qxn"
+path="res://.godot/imported/Bau.png-32ce03a5158f54e62184244e03be6edc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JOGO/Helena.png"
-dest_files=["res://.godot/imported/Helena.png-3110d0ff9ce088a670758dd5f752f938.ctex"]
+source_file="res://Helena/Assets/Bau.png"
+dest_files=["res://.godot/imported/Bau.png-32ce03a5158f54e62184244e03be6edc.ctex"]
 
 [params]
 

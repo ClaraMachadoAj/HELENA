@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://4nhp7ncbssmb"]
 
-[ext_resource type="Script" path="res://JOGO/Dialog/DialogScreen.gd" id="1_hs6gp"]
+[ext_resource type="Script" path="res://Helena/Objects/Dialog/DialogScreen.gd" id="1_hs6gp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2530g"]
 line_spacing = 0.0

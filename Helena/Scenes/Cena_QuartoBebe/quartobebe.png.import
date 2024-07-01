@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4rlsy0ymghyk"
-path="res://.godot/imported/CarinhaFeliz.png-9a8c67fa60c9654c9c7360c2db4f3e23.ctex"
+uid="uid://couaq451xs4wo"
+path="res://.godot/imported/quartobebe.png-0e6a1d4bc9cdcd9c907aa8ea42396b7f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JOGO/Dialog/Assets/CarinhaFeliz.png"
-dest_files=["res://.godot/imported/CarinhaFeliz.png-9a8c67fa60c9654c9c7360c2db4f3e23.ctex"]
+source_file="res://Helena/Scenes/Cena_QuartoBebe/quartobebe.png"
+dest_files=["res://.godot/imported/quartobebe.png-0e6a1d4bc9cdcd9c907aa8ea42396b7f.ctex"]
 
 [params]
 

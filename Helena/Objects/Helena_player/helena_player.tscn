@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbk8g6jsr83ht"]
+
+[ext_resource type="Script" path="res://Helena/Objects/Helena_player/PLAYER.gd" id="1_lkoel"]
+[ext_resource type="Texture2D" uid="uid://brhk6nh2wk53x" path="res://Helena/Assets/Helena.png" id="2_8nlvl"]
+[ext_resource type="Script" path="res://Helena/Objects/Helena_player/interaction_area_2d.gd" id="3_cprwy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kmsur"]
+radius = 45.0
+height = 90.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kpctu"]
+radius = 81.0062
+
+[node name="Helena_Player" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+top_level = true
+position = Vector2(0, -70)
+script = ExtResource("1_lkoel")
+
+[node name="Helena" type="Sprite2D" parent="Player"]
+position = Vector2(3.99997, -93)
+scale = Vector2(0.188393, 0.169643)
+texture = ExtResource("2_8nlvl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+texture_filter = 1
+position = Vector2(0, -60)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CapsuleShape2D_kmsur")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+offset = Vector2(0, -70)
+zoom = Vector2(1.5, 1.5)
+
+[node name="AreaDeInteração" type="Area2D" parent="Player"]
+script = ExtResource("3_cprwy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AreaDeInteração"]
+position = Vector2(0, -67)
+shape = SubResource("CircleShape2D_kpctu")

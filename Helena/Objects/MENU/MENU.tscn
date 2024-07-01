@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cpon88be0ypfm"]
 
-[ext_resource type="Script" path="res://MENU/MENU.gd" id="1_lxhvr"]
-[ext_resource type="Texture2D" uid="uid://dnipkwyk4hxhf" path="res://MENU/capa (1).png" id="2_hw3uo"]
+[ext_resource type="Script" path="res://Helena/Objects/MENU/MENU.gd" id="1_lxhvr"]
+[ext_resource type="Texture2D" uid="uid://dnipkwyk4hxhf" path="res://Helena/Objects/capa (1).png" id="2_fqjyo"]
 
 [node name="MENU" type="Control"]
 layout_mode = 3
@@ -24,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_hw3uo")
+texture = ExtResource("2_fqjyo")
 
 [node name="INICIAR" type="Button" parent="NinePatchRect"]
 layout_mode = 1

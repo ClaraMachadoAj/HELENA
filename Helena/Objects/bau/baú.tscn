@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bhvupindgvbn0"]
 
-[ext_resource type="Texture2D" uid="uid://doysxgs4w5qxn" path="res://JOGO/Objetos/Assets/Bau.png" id="1_itexj"]
-[ext_resource type="Script" path="res://JOGO/Objetos/Scripts/Baú_Interativo.gd" id="2_bk8rh"]
+[ext_resource type="Texture2D" uid="uid://doysxgs4w5qxn" path="res://Helena/Assets/Bau.png" id="1_f1glp"]
+[ext_resource type="Script" path="res://Helena/Objects/bau/Baú_Interativo.gd" id="2_bk8rh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nwp7k"]
 radius = 46.5188
@@ -9,7 +9,7 @@ radius = 46.5188
 [node name="Baú" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_itexj")
+texture = ExtResource("1_f1glp")
 
 [node name="BaúInterractableArea2D" type="Area2D" parent="."]
 script = ExtResource("2_bk8rh")
