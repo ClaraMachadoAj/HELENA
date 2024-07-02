@@ -39,7 +39,6 @@ func show_dialog() -> void:
 	
 	
 func _on_area_entered(area):
-	if _dialog_instance == null&& area.name == "AreaDeInteraçãoHelena":
+	if _dialog_instance == null && area.name == "AreaDeInteraçãoHelena":
 		is_diolog_possible = true
 		show_dialog()
-	print(area.name)

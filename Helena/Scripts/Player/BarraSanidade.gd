@@ -5,7 +5,6 @@ extends ProgressBar
 
 func _ready():
 	if player:
-		print("BARRA SANIDADE")
 		player.sanidadeChanged.connect(update)
 		update()
 	else:

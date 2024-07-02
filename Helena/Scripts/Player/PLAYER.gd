@@ -1,11 +1,11 @@
 extends CharacterBody2D
 class_name PLAYER
 
-
-
 #Movimentação
 const SPEED = 300.0
 const SPRINT_MULTIPLIER = 1.5
+const MAX_STAMINA = 3.0  # Estamina máxima em segundos
+
 var last_direction = 0.0
 
 #Sanidade
@@ -20,32 +20,40 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 #ANIMAÇÃO
 @onready var anim = get_node("AnimatedSprite2D")
 
-#SANITYTIMER
+
+#SANITYTIMER - sanidade
 @onready var sanity_timer = $SanityTimer  
 
+var stamina = MAX_STAMINA
+var can_sprint = true
+
 func _ready():
+	#Sanidade
 	sanity_timer.connect("timeout", Callable(self, "_on_SanityTimer_timeout"))
 	sanity_timer.start()
-
-func _on_SanityTimer_timeout():
-	testSanidade()
-
-func testSanidade():
-	currentSanidade -= 1
-	if currentSanidade < 10:
-		currentSanidade = maxSanidade
-	sanidadeChanged.emit()
-
 	
+	set_physics_process(true)
+
+
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-	
+
 	# Check if the sprint key is pressed
-	var is_sprinting = Input.is_action_pressed("SPRINT")
+	if Input.is_action_pressed("SPRINT") and can_sprint and stamina > 0:
+		stamina -= delta
+		if stamina <= 0:
+			stamina = 0
+			can_sprint = false
+	else:
+		# Reset stamina when sprint key is released
+		if not Input.is_action_pressed("SPRINT"):
+			reset_stamina()
+
+	# Adjust speed based on sprinting
 	var current_speed = SPEED
-	if is_sprinting:
+	if can_sprint and Input.is_action_pressed("SPRINT"):
 		current_speed *= SPRINT_MULTIPLIER
 
 	# Movimentação horizontal
@@ -80,3 +88,18 @@ func _physics_process(delta):
 			anim.play("Idle_down")
 
 	move_and_slide()
+
+func reset_stamina():
+	stamina = MAX_STAMINA
+	can_sprint = true
+	
+
+#Sanidade
+func _on_SanityTimer_timeout():
+	testSanidade()
+
+func testSanidade():
+	currentSanidade -= 1
+	if currentSanidade < 10:
+		currentSanidade = maxSanidade
+	sanidadeChanged.emit()
