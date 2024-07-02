@@ -1,14 +1,41 @@
 extends CharacterBody2D
+class_name PLAYER
 
+
+
+#Movimentação
 const SPEED = 300.0
 const SPRINT_MULTIPLIER = 1.5
 var last_direction = 0.0
 
+#Sanidade
+signal  sanidadeChanged
+@export var maxSanidade = 100
+@onready var currentSanidade: int = maxSanidade
+
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+#ANIMAÇÃO
 @onready var anim = get_node("AnimatedSprite2D")
-	
+
+#SANITYTIMER
+@onready var sanity_timer = $SanityTimer  
+
+func _ready():
+	sanity_timer.connect("timeout", Callable(self, "_on_SanityTimer_timeout"))
+	sanity_timer.start()
+
+func _on_SanityTimer_timeout():
+	testSanidade()
+
+func testSanidade():
+	currentSanidade -= 1
+	if currentSanidade < 10:
+		currentSanidade = maxSanidade
+	sanidadeChanged.emit()
+
 	
 func _physics_process(delta):
 	# Add the gravity.
