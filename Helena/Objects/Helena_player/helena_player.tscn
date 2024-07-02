@@ -124,9 +124,9 @@ animation = &"Down"
 offset = Vector2(0, -70)
 zoom = Vector2(1.5, 1.5)
 
-[node name="AreaDeInteração" type="Area2D" parent="Player"]
+[node name="AreaDeInteraçãoHelena" type="Area2D" parent="Player"]
 script = ExtResource("3_cprwy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AreaDeInteração"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AreaDeInteraçãoHelena"]
 position = Vector2(0, -67)
 shape = SubResource("CircleShape2D_kpctu")

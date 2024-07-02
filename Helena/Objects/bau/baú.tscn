@@ -19,3 +19,5 @@ _hud = NodePath("../HUD")
 shape = SubResource("CircleShape2D_nwp7k")
 
 [node name="HUD" type="CanvasLayer" parent="."]
+
+[connection signal="area_entered" from="BaúInterractableArea2D" to="BaúInterractableArea2D" method="_on_area_entered"]
