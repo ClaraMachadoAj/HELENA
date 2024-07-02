@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgyui6t1egws1"
-path="res://.godot/imported/Helena.png-0e0cea2059e1820bd53b2ca0d86753dc.ctex"
+uid="uid://dokv8a8sof1d3"
+path="res://.godot/imported/HELENA MÃO PRA FRENTE D.png-b66d57b9dedcc5dd0188e2aaf6027741.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Helena/Assets/Helena.png"
-dest_files=["res://.godot/imported/Helena.png-0e0cea2059e1820bd53b2ca0d86753dc.ctex"]
+source_file="res://Helena/Assets/PLayer/HELENA MÃO PRA FRENTE D.png"
+dest_files=["res://.godot/imported/HELENA MÃO PRA FRENTE D.png-b66d57b9dedcc5dd0188e2aaf6027741.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnipkwyk4hxhf"
-path="res://.godot/imported/capa (1).png-db95c2e3fb3de3d7c90318b6a8a9851f.ctex"
+uid="uid://enwxry7kmqp3"
+path="res://.godot/imported/HELENA COSTAS PD.png-dee00e0fb752fcb316c283391bda9c26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Helena/Objects/capa (1).png"
-dest_files=["res://.godot/imported/capa (1).png-db95c2e3fb3de3d7c90318b6a8a9851f.ctex"]
+source_file="res://Helena/Assets/PLayer/HELENA COSTAS PD.png"
+dest_files=["res://.godot/imported/HELENA COSTAS PD.png-dee00e0fb752fcb316c283391bda9c26.ctex"]
 
 [params]
 

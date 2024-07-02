@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://d0oew608yqgr7"]
 
-[ext_resource type="Script" path="res://Helena/Scenes/Cena_QuartoBebe/HELENA.gd" id="1_2arte"]
+[ext_resource type="Script" path="res://Helena/Scripts/Scenes/HELENA.gd" id="1_2arte"]
 [ext_resource type="Texture2D" uid="uid://couaq451xs4wo" path="res://Helena/Scenes/Cena_QuartoBebe/quartobebe.png" id="2_3tfpw"]
 [ext_resource type="PackedScene" uid="uid://dbk8g6jsr83ht" path="res://Helena/Objects/Helena_player/helena_player.tscn" id="3_ol54q"]
 [ext_resource type="PackedScene" uid="uid://bhvupindgvbn0" path="res://Helena/Objects/bau/baú.tscn" id="4_nvtau"]

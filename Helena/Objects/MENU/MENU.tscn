@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cpon88be0ypfm"]
 
-[ext_resource type="Script" path="res://Helena/Objects/MENU/MENU.gd" id="1_lxhvr"]
-[ext_resource type="Texture2D" uid="uid://dnipkwyk4hxhf" path="res://Helena/Objects/capa (1).png" id="2_fqjyo"]
+[ext_resource type="Script" path="res://Helena/Scripts/Menu/MENU.gd" id="1_lxhvr"]
+[ext_resource type="Texture2D" uid="uid://dnipkwyk4hxhf" path="res://Helena/Objects/MENU/capa (1).png" id="2_fqjyo"]
 
 [node name="MENU" type="Control"]
 layout_mode = 3
