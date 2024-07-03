@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhonk3474y43f"]
+
+[ext_resource type="Texture2D" uid="uid://bquwhqfsc18j8" path="res://Helena/Assets/1094416.png" id="1_fjh0n"]
+[ext_resource type="Script" path="res://Helena/Objects/JumpScare/Interaction_JumpScare.gd" id="2_jjykb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1annd"]
+radius = 47.0
+
+[node name="JumpScare" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.8147e-06, 1.90735e-06)
+scale = Vector2(0.146484, 0.163005)
+texture = ExtResource("1_fjh0n")
+
+[node name="Interaction_JumpScare" type="Area2D" parent="."]
+script = ExtResource("2_jjykb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction_JumpScare"]
+shape = SubResource("CircleShape2D_1annd")

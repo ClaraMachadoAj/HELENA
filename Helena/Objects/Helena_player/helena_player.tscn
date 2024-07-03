@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://dbk8g6jsr83ht"]
+[gd_scene load_steps=20 format=3 uid="uid://dbk8g6jsr83ht"]
 
 [ext_resource type="Script" path="res://Helena/Scripts/Player/PLAYER.gd" id="1_lkoel"]
 [ext_resource type="Texture2D" uid="uid://cgyui6t1egws1" path="res://Helena/Assets/Helena.png" id="2_8nlvl"]
 [ext_resource type="Texture2D" uid="uid://nenlbcjadvq6" path="res://Helena/Assets/PLayer/!2.png" id="2_75dgj"]
+[ext_resource type="Texture2D" uid="uid://c0ii037b0oxn4" path="res://Helena/Assets/Helena_Normal.PNG" id="2_ilh6q"]
 [ext_resource type="Script" path="res://Helena/Scripts/Player/interaction_area_2d.gd" id="3_cprwy"]
 [ext_resource type="Texture2D" uid="uid://ct1js6i3vddtb" path="res://Helena/Assets/PLayer/!.png" id="3_gt23m"]
 [ext_resource type="Texture2D" uid="uid://btnjgw23ovm5o" path="res://Helena/Assets/PLayer/HELENA PARADA D (1).png" id="4_luw61"]
@@ -22,6 +23,14 @@ height = 90.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tc7e8"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ilh6q")
+}],
+"loop": true,
+"name": &"Acalmar",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_75dgj")
@@ -116,10 +125,11 @@ scale = Vector2(0.5, 0.5)
 shape = SubResource("CapsuleShape2D_kmsur")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-position = Vector2(4, -96)
-scale = Vector2(0.223661, 0.223661)
+position = Vector2(-2, -62)
+scale = Vector2(0.11811, 0.11811)
 sprite_frames = SubResource("SpriteFrames_tc7e8")
 animation = &"Down"
+frame_progress = 0.268478
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 offset = Vector2(0, -70)

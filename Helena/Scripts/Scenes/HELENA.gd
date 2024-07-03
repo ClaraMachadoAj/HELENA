@@ -3,6 +3,8 @@ class_name Helena
 
 const _DIALOG_SCREEN: PackedScene = preload("res://Helena/Objects/Dialog/DialogScreen.tscn")
 
+
+
 var _dialog_data: Dictionary = {
 	0: {
 		"faceset": "res://Helena/Objects/Dialog/Assets/CarinhaFeliz.png",

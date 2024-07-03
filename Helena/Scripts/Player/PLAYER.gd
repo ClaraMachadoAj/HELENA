@@ -86,6 +86,8 @@ func _physics_process(delta):
 		else:
 			velocity.y = move_toward(velocity.y, 0, SPEED)
 			anim.play("Idle_down")
+		if Input.is_action_pressed("acalmar"):
+			anim.play("Acalmar")
 
 	move_and_slide()
 
@@ -100,6 +102,12 @@ func _on_SanityTimer_timeout():
 
 func testSanidade():
 	currentSanidade -= 1
+	if Global.sanity_interaction == 1:
+		currentSanidade -= 20
+		Global.sanity_interaction = 0
 	if currentSanidade < 10:
 		currentSanidade = maxSanidade
 	sanidadeChanged.emit()
+	if Input.is_action_pressed("acalmar"):
+		currentSanidade +=5
+	

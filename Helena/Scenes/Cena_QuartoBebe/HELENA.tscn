@@ -1,9 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://d0oew608yqgr7"]
+[gd_scene load_steps=24 format=3 uid="uid://d0oew608yqgr7"]
 
 [ext_resource type="Script" path="res://Helena/Scripts/Scenes/HELENA.gd" id="1_2arte"]
 [ext_resource type="Texture2D" uid="uid://couaq451xs4wo" path="res://Helena/Scenes/Cena_QuartoBebe/quartobebe.png" id="2_3tfpw"]
 [ext_resource type="PackedScene" uid="uid://dbk8g6jsr83ht" path="res://Helena/Objects/Helena_player/helena_player.tscn" id="3_ol54q"]
 [ext_resource type="PackedScene" uid="uid://bhvupindgvbn0" path="res://Helena/Objects/bau/baú.tscn" id="4_nvtau"]
+[ext_resource type="PackedScene" uid="uid://dhonk3474y43f" path="res://Helena/Objects/JumpScare/jump_scare.tscn" id="5_luug7"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ova0t"]
 a = Vector2(578.5, -548.5)
@@ -76,8 +77,9 @@ b = Vector2(309, -57)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6i0vi"]
 size = Vector2(1156, 660)
 
-[node name="Helena" type="Node2D"]
+[node name="Helena" type="Node2D" node_paths=PackedStringArray("_hud")]
 script = ExtResource("1_2arte")
+_hud = NodePath("HUD")
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -154,5 +156,8 @@ position = Vector2(713.586, -982.071)
 
 [node name="Baú" parent="Area2D" instance=ExtResource("4_nvtau")]
 position = Vector2(332, -231)
+
+[node name="JumpScare" parent="Area2D" instance=ExtResource("5_luug7")]
+position = Vector2(463, -28)
 
 [node name="HUD" type="CanvasLayer" parent="."]

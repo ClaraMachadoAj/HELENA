@@ -2,7 +2,6 @@ extends ProgressBar
 
 @export var player: PLAYER
 
-
 func _ready():
 	if player:
 		player.sanidadeChanged.connect(update)
@@ -13,4 +12,7 @@ func _ready():
 
 func update():
 	value = player.currentSanidade * 100 / player.maxSanidade
+	
+	
+	
 	
